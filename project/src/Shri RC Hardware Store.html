@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri RC Hardware - Industrial Hardware & Fittings Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a56db',
+                        secondary: '#10b981'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body { font-family: 'Inter', sans-serif; }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .modal.show {
+            display: flex;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-['Pacifico'] text-primary">Shri RC Hardware</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a>
+                    <a href="#products" class="text-gray-300 hover:text-white transition-colors">Products</a>
+                    <a href="#custom-order" class="text-gray-300 hover:text-white transition-colors">Custom Order</a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="flex items-center space-x-2 bg-primary hover:bg-primary/90 text-white px-4 py-2 !rounded-button">
+                        <i class="ri-shopping-cart-2-line"></i>
+                        <span>Cart (0)</span>
+                    </button>
+                    <button class="md:hidden text-2xl">
+                        <i class="ri-menu-line"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <section class="relative overflow-hidden bg-gray-900 py-20">
+            <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://public.readdy.ai/ai/img_res/1502f22d8fe48e3a582203b40b1141c2.jpg')"></div>
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="relative z-10">
+                        <h1 class="text-5xl font-bold leading-tight mb-6">Premium Industrial Hardware & Fittings Solutions</h1>
+                        <p class="text-xl text-gray-300 mb-8">Your trusted partner for high-quality pipe fittings, industrial hardware, and customized solutions. Serving industry professionals since 1995.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <button class="bg-primary hover:bg-primary/90 text-white px-8 py-3 !rounded-button text-lg font-medium">
+                                Browse Products
+                            </button>
+                            <button class="bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 !rounded-button text-lg font-medium">
+                                Request Quote
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://public.readdy.ai/ai/img_res/2b9e47758524e8d6f7362fc5b5d4a300.jpg" alt="Featured Products" class="rounded-lg shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Our Product Categories</h2>
+                    <p class="text-gray-300 text-lg">Explore our comprehensive range of industrial hardware solutions</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-900 rounded-lg p-6 hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                            <i class="ri-tools-line text-3xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Pipe Fittings</h3>
+                        <p class="text-gray-400 mb-4">High-quality GI, MS, PVC, and HDPE fittings in various sizes</p>
+                        <button class="text-primary hover:text-primary/90 font-medium flex items-center">
+                            View Products <i class="ri-arrow-right-line ml-2"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-gray-900 rounded-lg p-6 hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
+                            <i class="ri-settings-3-line text-3xl text-secondary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Valves & Controls</h3>
+                        <p class="text-gray-400 mb-4">Comprehensive range of industrial valves and control systems</p>
+                        <button class="text-primary hover:text-primary/90 font-medium flex items-center">
+                            View Products <i class="ri-arrow-right-line ml-2"></i>
+                        </button>
+                    </div>
+
+                    <div class="bg-gray-900 rounded-lg p-6 hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                            <i class="ri-hammer-line text-3xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Industrial Hardware</h3>
+                        <p class="text-gray-400 mb-4">Essential hardware components and industrial supplies</p>
+                        <button class="text-primary hover:text-primary/90 font-medium flex items-center">
+                            View Products <i class="ri-arrow-right-line ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="custom-order" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-bold mb-4">Custom Order Request</h2>
+                        <p class="text-gray-300">Need something specific? Let us know your requirements</p>
+                    </div>
+
+                    <form id="customOrderForm" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Company Name</label>
+                                <input type="text" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Contact Person</label>
+                                <input type="text" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Phone</label>
+                                <input type="tel" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Product Category</label>
+                            <select class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                <option value="">Select a category</option>
+                                <option value="pipe-fittings">Pipe Fittings</option>
+                                <option value="valves">Valves & Controls</option>
+                                <option value="hardware">Industrial Hardware</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Product Requirements</label>
+                            <textarea rows="4" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-primary focus:border-transparent" required></textarea>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Upload Specifications (Optional)</label>
+                            <div class="border-2 border-dashed border-gray-700 rounded-lg p-6 text-center">
+                                <input type="file" class="hidden" id="fileUpload">
+                                <label for="fileUpload" class="cursor-pointer">
+                                    <i class="ri-upload-cloud-line text-3xl mb-2"></i>
+                                    <p class="text-sm text-gray-400">Click to upload or drag and drop</p>
+                                    <p class="text-xs text-gray-500 mt-1">PDF, DOC, or image files</p>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 !rounded-button font-medium">
+                            Submit Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-800">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Why Choose Us</h2>
+                    <p class="text-gray-300">Experience excellence in industrial hardware solutions</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-shield-check-line text-3xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Quality Assured</h3>
+                        <p class="text-gray-400">All products meet international quality standards</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-truck-line text-3xl text-secondary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Fast Delivery</h3>
+                        <p class="text-gray-400">Quick processing and reliable shipping</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-customer-service-2-line text-3xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Expert Support</h3>
+                        <p class="text-gray-400">Technical assistance and after-sales support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+                    <div class="space-y-2 text-gray-400">
+                        <p>123 Industrial Area</p>
+                        <p>Mumbai, Maharashtra 400001</p>
+                        <p>Phone: +91 98765 43210</p>
+                        <p>Email: info@shrichardware.com</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Custom Orders</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Track Order</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Business Hours</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
+                        <li>Saturday: 9:00 AM - 2:00 PM</li>
+                        <li>Sunday: Closed</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to receive updates and special offers</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <button class="bg-primary hover:bg-primary/90 text-white px-4 py-2 !rounded-r-button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2025 Shri RC Hardware. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="successModal" class="modal">
+        <div class="bg-gray-900 p-8 rounded-lg max-w-md mx-auto my-auto">
+            <div class="text-center">
+                <div class="w-16 h-16 mx-auto bg-green-500/10 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-check-line text-3xl text-green-500"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Request Submitted Successfully</h3>
+                <p class="text-gray-400 mb-6">We'll get back to you within 24 hours with a detailed quotation.</p>
+                <button onclick="closeModal()" class="bg-primary hover:bg-primary/90 text-white px-6 py-2 !rounded-button">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('customOrderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('successModal').classList.add('show');
+        });
+
+        function closeModal() {
+            document.getElementById('successModal').classList.remove('show');
+        }
+    </script>
+</body>
+</html>
